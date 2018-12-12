@@ -3,6 +3,8 @@
 	ob_start();
 
 	// Keep the state we preserve
+	// starts on load and logged in.
+	// Disabled when window is closed
 	session_start();
  ?>
 
@@ -40,6 +42,7 @@
 
 						header('Refresh:2; URL=home.php');
 					} else {
+						// else give me an error
 						echo('Incorrect username and/or password. Please try again');
 					}
 				}
